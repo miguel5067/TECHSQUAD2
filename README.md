@@ -15,4 +15,4 @@ This repository contains engineering materials of a self-driven vehicle's model 
 
 ## Introduction
 
-_This part must be filled by participants with the technical clarifications about the code: which modules the code consists of, how they are related to the electromechanical components of the vehicle, and what is the process to build/compile/upload the code to the vehicle’s controller
+Hello! We are Teachsquad, composed of Miguel Sánchez, Samuel Sánchez, and myself, Miguelangel Moreno. We represent the Future Engineers category. Our robot is an Osoyoo Racer kit with dimensions of 25x5 cm. It's equipped with an Arduino Uno-based board and incorporates 2 servo motors, 1 IR sensor, 2 color sensors, 1 ultrasonic sensor, and a 9V battery. We designed the robot to avoid and surpass obstacles on the track. We used the ultrasonic sensor and color sensors for the robot to detect distance and colors, enabling turns (red = right, green = left).
