@@ -6,7 +6,7 @@ En este repositorio se recopila la informacion desarrollada durante la participa
 
 ## Content
 
-* `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members) Contiene doa fotos del equipo de estudiantes, que somos: Miguel, Samuel y Miguelangel.
+* `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members) Contiene dos fotos del equipo de estudiantes, que somos: Miguel, Samuel y Miguelangel.
 * `v-photos` contains 6 photos of the vehicle (from every side, from top and bottom) Esta seccion contiene fotos del equipo en diferentes vistas.
 * `video` contains the video.md file with the link to a video where driving demonstration exists. En esta seccion presentamos un video de los dias de prueba y funcionamiento del prototipo. 
 * `schemes` contains one or several schematic diagrams in form of JPEG, PNG or PDF of the electromechanical components illustrating all the elements (electronic components and motors) used in the vehicle and how they connect to each other. En esta seccion presentamos los esquemas electricos y mecanicos de armado y funcionamiento del prototipo. En la parte mecanica, el prototipo cuenta con un servomotor para la dirección, que es controlado por la señal de los sensores ultrasonicos. Para el avance contamos con otro motor conectado mediante engranajes y un eje, a las dos ruedas traseras. En el esquema electrico presentamos las conecciones de la placa arduino uno y cada uno de los sensores. La alimentacion se da a traves de una bateria de 9 voltios 650 mAh recargable. Adicional esta el archivo de coneccion de la camara que nos sirve para la visualizacion de los obstaculos y la deteccion de color es a traves de los sensores de color.
