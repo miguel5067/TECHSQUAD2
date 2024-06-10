@@ -14,4 +14,5 @@ En este repositorio se recopila la informacion desarrollada durante la participa
   
 ## Introduction
 
-Hello! We are Teachsquad, composed of Miguel Sánchez, Samuel Sánchez, and myself, Miguelangel Moreno. We represent the Future Engineers category. Our robot is an Osoyoo Racer kit with dimensions of 25x5 cm. It's equipped with an Arduino Uno-based board and incorporates 2 servo motors, 1 IR sensor, 2 color sensors, 1 ultrasonic sensor, and a 9V battery. We designed the robot to avoid and surpass obstacles on the track. We used the ultrasonic sensor and color sensors for the robot to detect distance and colors, enabling turns (red = right, green = left).
+Hello! We are Teachsquad2, composed of Miguel Sánchez, Oliver Alfonso, Carlos Yauge.  We represent the category of Future Engineers. This team is an oli bot 
+With a board based on Arduino Mega and a controller, Osooyo incorporates 2 servomotors, 2 ultrasonic motors, 1 pyxsi camera. We design the robot to avoid and overcome obstacles on the track. We use the ultrasonic sensor and a camera for the robot to detect distance and colors, allowing turns (red = right, green = left).
