@@ -1,8 +1,8 @@
 Engineering materials
 ====
 
-This repository contains engineering materials of a self-driven vehicle's model participating in the WRO Future Engineers competition in the season 2023.
-En este repositorio se recopila la informacion desarrollada durante la participacion de nuestro equipo en la WRO 2023. 
+This repository contains engineering materials of a self-driven vehicle's model participating in the WRO Future Engineers competition in the season 2024.
+En este repositorio se recopila la informacion desarrollada durante la participacion de nuestro equipo en la WRO 2024. 
 
 ## Content
 
