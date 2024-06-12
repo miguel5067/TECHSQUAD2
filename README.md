@@ -14,5 +14,5 @@ En este repositorio se recopila la informacion desarrollada durante la participa
   
 ## Introduction
 
-Hello! We are Teachsquad2, composed of Miguel Sánchez, Oliver Alfonso, Carlos Yauge.  We represent the category of Future Engineers. This team is an oli bot 
-With a board based on Arduino Mega and a controller, Osooyo incorporates 2 servomotors, 2 ultrasonic motors, 1 pyxsi camera. We design the robot to avoid and overcome obstacles on the track. We use the ultrasonic sensor and a camera for the robot to detect distance and colors, allowing turns (red = right, green = left).
+Hello! We are Teachsquad2, composed of Miguel Sánchez, Oliver Alfonso, Carlos Yauge.  We represent the category of Future Engineers. This team is an olibots.
+With an Arduino Mega based board. It incorporates 2 servomotors, 3 ultrasonic motors, 1 pyxsi camera. We designed the robot to avoid and overcome obstacles on the track. We use the ultrasonic sensor and a camera for the robot to detect distance and colors, allowing turns (red = right, green = left).
