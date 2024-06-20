@@ -6,7 +6,7 @@ En este repositorio se recopila la informacion desarrollada durante la participa
 
 ## Content
 
-* `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members) Contiene dos fotos del equipo de estudiantes, que somos: Miguel, Samuel y Miguelangel.
+* `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members) Contiene dos fotos del equipo de estudiantes, que somos: Miguel, oliver y carlos.
 * `v-photos` contains 6 photos of the vehicle (from every side, from top and bottom) Esta seccion contiene fotos del prototipo en diferentes vistas.
 * `video` contains the video.md file with the link to a video where driving demonstration exists. En esta seccion presentamos un video de los dias de prueba y funcionamiento del prototipo. 
 * `schemes` contains one or several schematic diagrams in form of JPEG, PNG or PDF of the electromechanical components illustrating all the elements (electronic components and motors) used in the vehicle and how they connect to each other. En esta seccion presentamos los esquemas electricos y mecanicos de armado y funcionamiento del prototipo. En la parte mecanica, el prototipo cuenta con un servomotor para la dirección, que es controlado por la señal de los sensores ultrasonicos. Para el avance contamos con otro motor conectado mediante engranajes y un eje, a las dos ruedas traseras. En el esquema electrico presentamos las conecciones de la placa arduino uno, la placa de control del motor y cada uno de los sensores. La alimentacion se da a traves de una bateria de 9 voltios 650 mAh recargable. Adicional esta el archivo de coneccion de la camara que nos sirve para la visualizacion de los obstaculos y la deteccion de color es a traves de los sensores de color.
@@ -15,4 +15,4 @@ En este repositorio se recopila la informacion desarrollada durante la participa
 ## Introduction
 
 Hello! We are Teachsquad2, composed of Miguel Sánchez, Oliver Alfonso, Carlos Yauge.  We represent the category of Future Engineers. This team is an olibots.
-With an Arduino Mega based board. It incorporates 2 servomotors, 3 ultrasonic motors, 1 pyxsi camera. We designed the robot to avoid and overcome obstacles on the track. We use the ultrasonic sensor and a camera for the robot to detect distance and colors, allowing turns (red = right, green = left).
+With an Arduino Mega based board. It incorporates 1 servomotors, 2 ultrasonic, 1 motors. We designed the robot to avoid and overcome obstacles on the track. We use the ultrasonic sensor and a camera for the robot to detect distance and colors, allowing turns (red = right, green = left).
