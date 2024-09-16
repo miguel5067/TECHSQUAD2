@@ -1,0 +1,147 @@
+INICIO
+
+    DEFINIR TRIG_PIN COMO 2
+    DEFINIR ECHO_PIN COMO 3
+
+    DEFINIR ENA COMO 7
+    DEFINIR IN1 COMO 6
+    DEFINIR IN2 COMO 5
+
+    DEFINIR SERVO_PIN COMO 8
+
+    DEFINIR giro COMO VERDADERO
+    DEFINIR contador COMO 0
+    DEFINIR colorPilar COMO 0
+
+    DEFINIR velocidad COMO 165
+    DEFINIR velocidadRetroceso COMO 195
+    DEFINIR velocidadGiro COMO 170
+
+    INICIALIZAR myServo
+    INICIALIZAR pixy
+    INICIALIZAR color
+
+    DEFINIR rangoRojoMin COMO 150
+    DEFINIR rangoRojoMax COMO 200
+    DEFINIR rangoVerdeMin COMO 150
+    DEFINIR rangoVerdeMax COMO 200
+
+    FUNCION moveForward()
+        ESTABLECER myServo A 90
+        ESTABLECER IN1 A ALTO
+        ESTABLECER IN2 A BAJO
+        AJUSTAR ENA A velocidad
+    FIN FUNCION
+
+    FUNCION turnRight()
+        ESTABLECER myServo A 125
+        ESTABLECER IN1 A ALTO
+        ESTABLECER IN2 A BAJO
+        AJUSTAR ENA A velocidadGiro
+    FIN FUNCION
+
+    FUNCION turnLeft()
+        ESTABLECER myServo A 45
+        ESTABLECER IN1 A ALTO
+        ESTABLECER IN2 A BAJO
+        AJUSTAR ENA A velocidadGiro
+    FIN FUNCION
+
+    FUNCION Girar(giro)
+        SI giro ES VERDADERO
+            LLAMAR a turnLeft()
+        SINO
+            LLAMAR a turnRight()
+    FIN FUNCION
+
+    FUNCION detectColor()
+        LLAMAR a pixy.ccc.getBlocks()
+        DEFINIR colorDet COMO 0
+        DEFINIR rojoDetectado COMO FALSO
+        DEFINIR verdeDetectado COMO FALSO
+
+        SI pixy.ccc.numBlocks ES MAYOR QUE 0
+            PARA CADA bloque EN pixy.ccc.blocks
+                DEFINIR color COMO pixy.ccc.blocks[i].m_signature
+                DEFINIR xPos COMO pixy.ccc.blocks[i].m_x
+
+                SI color ES 1 Y xPos ESTA EN rangoRojoMin HASTA rangoRojoMax
+                    ESTABLECER rojoDetectado A VERDADERO
+                    IMPRIMIR "Rojo detectado en X: " Y xPos
+                    ESTABLECER colorDet A 1
+                SINO SI color ES 2 Y xPos ESTA EN rangoVerdeMin HASTA rangoVerdeMax
+                    ESTABLECER verdeDetectado A VERDADERO
+                    IMPRIMIR "Verde detectado en X: " Y xPos
+                    ESTABLECER colorDet A 2
+        FIN SI
+
+        RETORNAR colorDet
+    FIN FUNCION
+
+    FUNCION moveBack()
+        ESTABLECER myServo A 115
+        ESTABLECER IN1 A BAJO
+        ESTABLECER IN2 A ALTO
+        AJUSTAR ENA A velocidadRetroceso
+    FIN FUNCION
+
+    FUNCION stop()
+        ESTABLECER IN1 A BAJO
+        ESTABLECER IN2 A BAJO
+        AJUSTAR ENA A 0
+    FIN FUNCION
+
+    FUNCION getUltrasonicDistance()
+        ESTABLECER TRIG_PIN A BAJO
+        ESTABLECER TRIG_PIN A ALTO
+        ESTABLECER TRIG_PIN A BAJO
+        DEFINIR duration COMO PULSEO DE ECHO_PIN
+        DEFINIR distance COMO duration * 0.034 / 2
+        IMPRIMIR "Distancia: " Y distance Y " cm"
+        RETORNAR distance
+    FIN FUNCION
+
+    INICIALIZAR PINES Y COMUNICACION SERIAL
+    INICIALIZAR Pixy2
+
+    MIENTRAS VERDADERO
+        DEFINIR distance COMO getUltrasonicDistance()
+        SI distance ES MENOR QUE 35
+            LLAMAR a stop()
+            ESPERAR 1000 MILISEGUNDOS
+            ESTABLECER colorPilar COMO detectColor()
+
+            SI colorPilar ES 1
+                INCREMENTAR contador
+                LLAMAR a turnRight()
+                ESPERAR 1000 MILISEGUNDOS
+                LLAMAR a stop()
+                ESPERAR 500 MILISEGUNDOS
+            SINO SI colorPilar ES 2
+                INCREMENTAR contador
+                SI contador ES IGUAL A 12
+                    ESTABLECER giro A FALSO
+                    // TODO: HACER GIRO DE 180°
+                SINO
+                    LLAMAR a turnLeft()
+                    ESPERAR 1000 MILISEGUNDOS
+                    LLAMAR a stop()
+                    ESPERAR 500 MILISEGUNDOS
+            SINO
+                LLAMAR a stop()
+                ESPERAR 500 MILISEGUNDOS
+                LLAMAR a moveBack()
+                ESPERAR 1570 MILISEGUNDOS
+                LLAMAR a stop()
+                ESPERAR 500 MILISEGUNDOS
+
+                MIENTRAS distance ES MENOR QUE 55
+                    LLAMAR a Girar(giro)
+                    DEFINIR distance COMO getUltrasonicDistance()
+        SINO
+            LLAMAR a moveForward()
+
+        ESPERAR 250 MILISEGUNDOS
+    FIN MIENTRAS
+
+FIN
