@@ -1,1 +1,17 @@
 
+==Descripcion de la Movilidad del roboot==
+
+Sistema de Dirección: Nuestro robot es capaz de desplazarse gracias a un innovador sistema de dirección que combina un motor DC en la parte trasera y un 
+servomotor en la parte delantera, equipado con un mecanismo de dirección que puede soportar hasta 12V. Si no hay obstáculos en su camino, el robot puede 
+moverse en línea recta sin problemas. Para lograr esta precisión, el motor DC proporciona la propulsión y el servomotor controla la dirección.
+
+Detección de Obstáculos: El sensor de ultrasonidos juega un papel clave en este tipo de dirección. Si hay espacio suficiente entre el robot y el muro, decide girar el 
+servomotor a la izquierda. Con este movimiento, el robot no necesita detenerse y puede evitar el muro. La forma en que se gira el motor para moverse a la izquierda 
+da la impresión de la facilidad de movimiento de un verdadero coche, lo cual es responsable de la eficiencia del movimiento.
+
+Maniobra de Retroceso: Si reducimos el espacio entre el robot y el muro, se activará el movimiento de ida atrás. En este caso, el motor DC cambia su dirección y el 
+servomotor cambia la dirección de las ruedas delanteras. Luego de dar unos pasos hacia atrás, volverá a apuntar hacia la dirección recta. Este proceso se repetirá 
+continuamente, por lo que avanzar hacia un lugar con obstáculos se volverá automático.
+
+Fuente de Alimentación: La fuente de alimentación de mi robot es una batería de iones de litio de 7.4V y 2200mAh. Este robot es extremadamente eficiente en 
+términos de energía y puede dar varias vueltas sin necesidad de recargarse.
