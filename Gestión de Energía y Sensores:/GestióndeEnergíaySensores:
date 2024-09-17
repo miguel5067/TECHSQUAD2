@@ -1,1 +1,10 @@
 
+==Descripcion de la Gestion de Energetica==
+
+El enfoque de la administración de energía de nuestro robot se presenta en dos partes principales. En primer lugar, mantenemos un porta batería con dos baterías
+a 3.7V que dan un total de 7.4V; una parte se usa para el Arduino Mega y los sensores ultrasónicos que necesitan 5V. Esta energía proviene de la salida de 5V en el motor 
+shield L298N, lo que garantiza un flujo regular y seguro de energía a través de estos componentes críticos. Por lo tanto, proporciona la operación óptima del Arduino y
+los sensores para la detección precisa de obstáculos y la operación eficiente. La segunda parte de la energía se usa en el motor DC. El modulo L298N proporciona al 
+motor DC el voltaje y la corriente adecuados para operar y garantizar un control preciso de la velocidad y la dirección. Además, proporciona la potencia necesaria 
+al servomotor. Proporciona giros críticos que aportan a la maniobrabilidad del robot. No solo controla con precisión la distribución de energía, sino que también 
+modifica la velocidad y la dirección del motor dinámicamente, que es crucial para la marcha autónoma.
